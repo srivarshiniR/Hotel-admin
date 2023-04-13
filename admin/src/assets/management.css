@@ -1,0 +1,65 @@
+table, th ,td{
+    text-align: center;
+    border:0.5px solid rgba(0, 0, 0, 0.399);
+    border-collapse: collapse;
+    background-color:rgba(6, 161, 185, 0.384);
+
+}
+th{
+    padding:10px;
+    color:rgb(75, 75, 75);
+}
+table,td{
+    text-align: center;
+    border:0.5px solid rgba(0, 0, 0, 0.399);
+    border-collapse: collapse;
+    background-color:rgba(186, 193, 194, 0.384);
+
+}
+.table1{
+    margin-left: 30%;
+}
+
+.medicine-tab {
+    background-color:rgba(6, 161, 185, 0.643);
+    color:white;
+    display: flex;
+   
+}
+.icn{   
+    margin-right: 600px;
+}
+    
+
+
+
+.home-icon{
+   margin-top: 13px;
+   display:flex ;
+   flex-direction: initial;
+   font-size: 33px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in;
+    height: 50px;
+}
+.home-icon:hover {
+    background-color: #f2eaea46;
+    color: #110f0f73;
+  }
+  .DeleteProduct{
+    color:#fff;
+    background-color: red;
+    border:none;
+    border-radius: 10px;
+    padding:7px;
+    font-size: x-small;
+    cursor:pointer;
+  }
+  .DeleteProduct:hover{
+    background-color: rgb(71, 70, 70);
+    color:#fff;
+
+
+  }

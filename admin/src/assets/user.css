@@ -1,0 +1,10 @@
+.user-tab{
+    background-color:rgba(6, 161, 185, 0.643);
+    color:white;
+    display: flex;
+}
+.user-tab  h1{
+   
+    padding-left: 40%;
+ 
+}

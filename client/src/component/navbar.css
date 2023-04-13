@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color:rgb(25, 131, 173) !important;
+    /* opacity: 0.5 !important; */
+    height: 80px !important;
+    width: 100% !important;
+}
+.nav-link{
+    color:white !important;
+}
+.navbar-brand{
+    color: white !important;
+}
+.navbar-nav{
+    margin-left: auto !important;
+}

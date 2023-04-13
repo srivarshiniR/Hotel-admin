@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.display-content{
+    margin-top: 5%;
+    display:grid;
+    grid-template-columns: 600px 400px 300px ;
+}
+.display-value {
+    display:grid;
+   
+}
+.display-value img{
+    height:30vh;
+    width: 20vw;
+    margin:10px;
+}
+ .img4 img{
+    height:40vh;
+    width: 30vw;
+    margin:10px;
+    margin-top: 120px;
+}
+.display-content .img1 img{
+    height:70vh;
+    width: 40vw;
+    margin:10px;
+  
+}
+img{
+    object-fit: cover;
+}
+.display-rent{
+    margin-left: 80%;
+}
+.display-rent h3{
+    font-size: 50px;
+}
