@@ -6,7 +6,7 @@ import '../screens/bookingscreen.css';
 import Navbar from '../component/Navbar'
 import "./displayscreen.css";
 import { BiRupee } from "react-icons/bi";
-axios.defaults.baseURL = 'http://localhost:5005';
+axios.defaults.baseURL = 'http://localhost:5003';
 
 function Displayscreen() {
 
@@ -55,10 +55,14 @@ console.log("lett api get room",room)
       <div className='img3'><img src={ room?.imgurl?.length &&room?.imgurl[2]}></img></div> </div>
      
       <div className='img4'>  <img src={ room?.imgurl?.length &&room?.imgurl[3]}></img></div>
+    </div><br></br><br></br>
+    <div className='display-desc'>
+      <h4><b>About the Property</b></h4>
+      <h5>{room.desc}</h5>
     </div>
-    <div className='display-rent'>
+    {/* <div className='display-rent'>
      <h3><BiRupee size={70} />{room.rent}/-</h3>
-    </div>
+    </div> */}
     </div>
     )}
     </div>

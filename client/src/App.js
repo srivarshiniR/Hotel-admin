@@ -10,6 +10,7 @@ import Room from './screens/Room';
 import Homescreen from './screens/Homescreen';
 import Bookingscreen from './screens/Bookingscreen';
 import Displayscreen from './screens/Displayscreen';
+import Adminscreen from './screens/Adminscreen';
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
           <Route path='/room' element={<Room/>}/>
           <Route path='/booking/:roomid' element={<Bookingscreen/>}/>
           <Route path='/display/:roomid' element={<Displayscreen/>}/>
+          <Route path='/admin' element={<Adminscreen/>}/>
           
 
           </Routes>

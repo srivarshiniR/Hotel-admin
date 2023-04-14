@@ -21,7 +21,7 @@ function Login() {
       alert("Please fill out the fields");
     } else {
       console.log("vv");
-      Axios.post("http://localhost:5005/login", {
+      Axios.post("http://localhost:5003/api/user/login", {
         email: variable.email,
         password: variable.password,
       }).then((response) => {
@@ -30,7 +30,7 @@ function Login() {
         } else {
           console.log(response.data.token);
           window.localStorage.setItem("token", response.data.token); //setting a token
-          alert("success");
+          
           //setloginStatus(response.data.message);
           nav("/home");
         }

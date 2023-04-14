@@ -18,11 +18,12 @@ function Room({ rooms }) {
 
   const navigate = useNavigate();
   function gotobooking(id) {
+    if(fromdate&&todate){
     navigate(`/booking/${id}`, {
       state: { startdate: fromdate, enddate: todate , options:options},
     });
   }
-
+  }
   //dates declaration
 
   const [fromdate, setFromdate] = useState();
@@ -205,7 +206,7 @@ function Room({ rooms }) {
 
                   <button
                     className="btnbooking"
-                    onClick={() => gotobooking(rooms._id)}
+                    onClick={() => gotobooking(rooms?._id)}
                   >
                     Book Now
                   </button>

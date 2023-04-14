@@ -13,7 +13,7 @@ function Navbar() {
   function handleUser() {
 
     axios
-      .post("http://localhost:5005/userData", {
+      .post("http://localhost:5003/userData", {
         token: window.localStorage.getItem("token"),
       })
       .then((data) => {
@@ -24,7 +24,7 @@ function Navbar() {
 
   function logout() {
 
-    axios.put("http://localhost:5005/userData", {
+    axios.put("http://localhost:5003/userData", {
       token: window.localStorage.removeItem("token"),
     });
   }

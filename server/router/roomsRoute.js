@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
 
 const roomModel = require("../model/room");
-const roomtypeModel = require("../model/roomtype");
+
 
 //get room details
 
@@ -29,52 +30,42 @@ router.get("/getroombyid/:roomid", async (req, res) => {
   }
 });
 
-//get roomtype details
 
-router.get("/getroomstype", async (req, res) => {
+
+
+//post Api for rooms
+
+router.post("/room", async (req, res) => {
+  console.log("enter value");
   try {
-    const roomstype = await roomtypeModel.find({});
-    return res.json({ roomstype });
-  } catch (error) {
-    return res.status(400).json({ message: error });
-  }
-});
+    console.log("start");
+    const { name, maxcount, rent, type, destination, imgurl ,ratings} = req.body;
+    const newroom = await Room.create({
+      name,
+      maxcount,
+      rent,
+      destination,
+      type,
+      imgurl,
+      ratings
+    });
 
-//get roomstype details by id
-
-router.get("/getroomstypebyid/:roomstypeid", async (req, res) => {
-  const roomtypeid = req.params.roomid;
-
-  try {
-    const roomstype = await roomtypeModel.findOne({ _id: roomtypeid });
-    return res.send({ roomstype });
-  } catch (error) {
-    console.log(error);
-    return res.status(400).json({ message: error });
-  }
-});
-
-
-//aggregate
-
-router.get("/aggregate", async (req, res) => {
-  try {
-    var aggregate = [
-      {
-        $lookup: {
-          from: "rooms",
-          localField: "hotel_id",
-          foreignField: "_id",
-          as: "roomstype",
-        },
-      },
-    ];
-    const detail = await roomtypeModel.aggregate(aggregate);
-
-    res.json(detail);
+    console.log({ status: "ok" });
+    res.send({ status: "ok", data: newroom });
   } catch (err) {
-    res.send("Error" + err);
+    console.log("err", err);
   }
 });
+
+router.get("/room", async (req, res) => {
+  console.log("enters");
+  res.send({ status: "ok" });
+});
+
+
+
+
+
+
 
 module.exports = router;

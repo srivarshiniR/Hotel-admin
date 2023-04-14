@@ -19,7 +19,7 @@ const bookingschema=mongoose.Schema({
     },
 
     todate:{
-        type:toString,
+        type:String,
         required:true
     },
     type:{
